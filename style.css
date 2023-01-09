@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+body {
+  background-color: #252525;
+  position: relative;
+  height: 100vh;
+  width: 100%;
+}
+body #container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  margin: 0 auto;
+  width: 400px;
+  min-width: 400px;
+  background-color: #fff;
+  height: 600px;
+  min-height: 600px;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  overflow: auto;
+}
+body #container div {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 10px;
+}
+body #container div input {
+  width: 100%;
+  height: 30px;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  border: 1px solid #252525;
+  text-indent: 20px;
+}
+body #container div button {
+  background-color: #252525;
+  border-color: #252525;
+  color: #fff;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  text-transform: uppercase;
+}
+body #container #todo-list {
+  width: 100%;
+  margin-top: 20px;
+}
+body #container #todo-list div {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin: 10px 0;
+}
+body #container #todo-list div input {
+  width: auto;
+  height: 20px;
+}
+body #container #todo-list #single-todo {
+  padding: 10px;
+  border-top: 1px solid rgba(37, 37, 37, 0.3960784314);
+  border-bottom: 1px solid rgba(37, 37, 37, 0.3960784314);
+  display: grid;
+  grid-template-columns: 100px auto 40px;
+  font-variant: small-caps;
+  font-size: 18px;
+}
+body #container #todo-list #single-todo label {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}/*# sourceMappingURL=style.css.map */
