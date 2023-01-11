@@ -1,5 +1,8 @@
 const addTodoList = document.getElementById("add-todo-list");
 const getDataInput = document.getElementById("getData");
+const allTodoElement = document.querySelectorAll(".single-todo");
+const listTodo = document.querySelector("#todo-list");
+
 let valueInput;
 
 function inputGet(event) {
@@ -7,9 +10,7 @@ function inputGet(event) {
 }
 
 function getData() {
-  const allTodoElement = document.querySelectorAll("#single-todo");
   if (valueInput) {
-    const listTodo = document.querySelector("#todo-list");
     let length = listTodo.children.length;
     if (allTodoElement.length !== 0) {
       const idItem = allTodoElement[allTodoElement.length - 1].childNodes[0].id;
@@ -18,7 +19,8 @@ function getData() {
       length = numberIdItem + 1;
     }
     const createContainer = document.createElement("div");
-    createContainer.setAttribute("id", "single-todo");
+    createContainer.setAttribute("class", "single-todo");
+    createContainer.setAttribute("id", `list${length}`);
     createContainer.setAttribute("data-todo", `list${length}`);
     listTodo.appendChild(createContainer);
     const createCheckbox = document.createElement("input");
@@ -37,6 +39,8 @@ function getData() {
     createLabel.setAttribute("id", `list${length}`);
     createLabel.textContent = valueInput;
     createLabel.style.textTransform = "lowercase";
+    /*  createLabel.onmouseenter = () =>
+      fullDescription(`list${length}`, createLabel.textContent); */
     listTodo.lastChild.appendChild(createCheckbox);
     listTodo.lastChild.appendChild(createLabel);
     // Creo il button Delete
@@ -65,7 +69,6 @@ function resetInput() {
 
 function btnDelete(listToDelete) {
   const childNode = document.querySelector(`[data-todo=${listToDelete}]`);
-  const listTodo = document.querySelector("#todo-list");
   listTodo.removeChild(childNode);
 }
 
@@ -84,3 +87,11 @@ addTodoList.addEventListener("click", getData);
 document.addEventListener("keyup", (e) => {
   if (e.code === "Enter") getData();
 });
+
+/* function fullDescription(list, description) {
+  const container = document.createElement("div");
+  container.style.backgroundColor = "lightyellow";
+  container.textContent = description;
+  console.log(description);
+  document.querySelector(`.single-todo#${list}`).appendChild(container);
+} */

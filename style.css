@@ -79,7 +79,7 @@ body #container #todo-list div input {
   width: auto;
   height: 20px;
 }
-body #container #todo-list #single-todo {
+body #container #todo-list .single-todo {
   padding: 10px;
   border-top: 1px solid rgba(37, 37, 37, 0.3960784314);
   border-bottom: 1px solid rgba(37, 37, 37, 0.3960784314);
@@ -88,7 +88,7 @@ body #container #todo-list #single-todo {
   font-variant: small-caps;
   font-size: 18px;
 }
-body #container #todo-list #single-todo label {
+body #container #todo-list .single-todo label {
   overflow: hidden;
   text-overflow: ellipsis;
 }/*# sourceMappingURL=style.css.map */
